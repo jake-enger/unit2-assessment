@@ -133,4 +133,5 @@ console.log(deals)
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals(desc.splice('March', 'April'))
+deals(desc.remove (''))
