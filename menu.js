@@ -30,7 +30,15 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    'name' : 'margherita',
+    'price' : 10.99,
+    'category' : 'entree',
+    'popularity' : 10,
+    'rating' : 10,
+    'tags' : ['tasty', 'basil', 'mature'], 
+}
+
 
 
 
@@ -42,7 +50,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +60,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -62,8 +70,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
-
+let {price} = pizza
+console.log(`the margherita pizza costs ${price}.`)
 
 /*
     Fourth, and last, destructure the category
@@ -72,7 +80,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(`the margherita pizza is an ${category}.`)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +96,7 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArr = [pepperoni, 11.99, side, 9, 8, kids]
 
 
 
@@ -105,7 +114,7 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter([5])
 
 
 
@@ -148,7 +157,9 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+function filterByProperty(property, number, type)  {
+    
+}
 
 
 /*
