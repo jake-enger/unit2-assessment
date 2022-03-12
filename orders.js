@@ -30,18 +30,25 @@
 */
 
 class Ticket {
-    constructor(items, orderTime, customerID) {
+    constructor(items, orderTime, customerID,) {
     this.items = items;
     this.orderTime = orderTime;
     this.customerID = customerID;
     this.status = queued;
     }
-    
-    updateStatus(newStatus) {
-        newStatus = 'ready';
-       
+
+    updateStatus() {
+        newStatus = this.status;
+        console.log('The order for', Ticket.customerID, 'is now', this.status)
     }
+
+
 }
+
+updateStatus(newStatus)
+
+// I am not entirely sure what I'm doing wrong, if I try to console.log ANYTHING in that method, it breaks literally everything in this file, or it doesnt log anything to the console
+
 
 
 

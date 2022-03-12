@@ -19,9 +19,17 @@
     stored on the object.
 */
 
-//CODE HERE
+class Employee {
+    constructor(name, shifts) {
+    this.name = name;
+    this.shifts = shifts;
+    }
+     
+}
 
-
+function getSchedule(employee) {
+    console.log(employee.name, 'works on', employee.shifts)
+}
 
 /*
     Create a new instance of your class.
@@ -33,15 +41,14 @@
     shifts: weekday mornings, weekday afternoons
 */
 
-//CODE HERE
+let empOne = new Employee('Jess', 'Weekday mornings, weekday afternoons')
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
-//CODE HERE
-
+getSchedule(empOne)
 
 /*
     Make a copy of the empOne object
@@ -55,9 +62,9 @@
     dot or bracket notation.
 */
 
-//CODE HERE
+empTwo = empOne.name = 'Nick' 
 
-
+getSchedule(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -82,8 +89,19 @@
     the employees array. 
 */
 
-//CODE HERE
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts)
+        this.employees = employees
+    }
+}
 
+function getEmployees() {
+    console.log(Manager.name, 'manages', Employee.name)
+}
+function addEmployee(emp) {
+    Employee.name = emp
+}
 
 
 /*
@@ -97,7 +115,7 @@
     employees: Cece and Schmidt
 */
 
-//CODE HERE
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons','Cece and Schmidt' )
 
 
 /*
@@ -105,7 +123,7 @@
     `manager` object.  
 */
 
-//CODE HERE
+getEmployees(manager)
 
 /*
     Call the `addEmployee` method on the 
@@ -113,7 +131,7 @@
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+addEmployee('Coach')
 
 /*
     Call the `getEmployees` method on the
@@ -121,4 +139,4 @@
     that an employee was added.
 */
 
-//CODE HERE
+getEmployees(manager)
