@@ -21,9 +21,9 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+let greetUser = username => 'Welcome back' + username;
 
-
+greetUser('Andrew')
 
 
 
@@ -49,7 +49,14 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+function canWeDeliver(zipCode) {
+    let (i = 0, i < deliveryAreaZipCodes.length, i++);
+    if (i > 85210) {
+        console.log("You're in our delivery zone!")
+    } else {
+        console.log("Sorry, we cannot deliver to this address")
+    }
+}
 
 
 
@@ -70,7 +77,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+function canWeDeliverTwo() {
+    deliveryAreaZipCodes.includes('21')
+    console.log("Sorry, we cannot deliver to this address")
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -106,8 +116,8 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-
+deals(title.splice("15% Off!", "10% Off!"))
+console.log(deals)
 
 
 /*

@@ -96,7 +96,7 @@ console.log(`the margherita pizza is an ${category}.`)
     data in some functions that you'll write.
 */
 
-const foodArr = [pepperoni, 11.99, side, 9, 8, kids]
+const foodArr = ['pepperoni', 11.99, 'side', 9, 8, 'kids']
 
 
 
