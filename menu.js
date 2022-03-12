@@ -158,7 +158,13 @@ const filteredFood = foodArr.filter([5])
 */
 
 function filterByProperty(property, number, type)  {
-    
+    property = pizza.popularity;
+    number = pizza.rating;
+    type = pizza.price;
+var filterByPopularity = []
+    if (pizza < 8) {
+        pizza.push
+    }
 }
 
 
@@ -169,4 +175,6 @@ function filterByProperty(property, number, type)  {
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+filterByProperty(pizza, 6, price)
+
+console.log(filterByProperty)
