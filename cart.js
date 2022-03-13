@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce(cart.pizza, cart.pasta, cart.salad)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -53,8 +53,10 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    
 
+}
 
 
 //////////////////PROBLEM 3////////////////////
