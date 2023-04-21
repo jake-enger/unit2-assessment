@@ -31,13 +31,13 @@
 */
 
 const pizza = {
-    'name' : 'margherita',
-    'price' : 10.99,
-    'category' : 'entree',
-    'popularity' : 10,
-    'rating' : 10,
-    'tags' : ['tasty', 'basil', 'mature'], 
-}
+    name: "Margherita",
+    price: 12.99,
+    category: "Entree",
+    popularity: 5,
+    rating: 4.8,
+    tags: ["vegetarian", "gluten-free"]
+  };
 
 
 
@@ -96,7 +96,49 @@ console.log(`the margherita pizza is an ${category}.`)
     data in some functions that you'll write.
 */
 
-const foodArr = ['pepperoni', 11.99, 'side', 9, 8, 'kids']
+const foodArr = [
+    {
+      name: 'Margherita Pizza',
+      price: 12.99,
+      category: 'entree',
+      popularity: 5,
+      rating: 4.5,
+      tags: ['vegetarian', 'classic']
+    },
+    {
+      name: 'Pepperoni Pizza',
+      price: 14.99,
+      category: 'entree',
+      popularity: 4,
+      rating: 4.8,
+      tags: ['meat', 'classic']
+    },
+    {
+      name: 'Garlic Bread',
+      price: 4.99,
+      category: 'appetizer',
+      popularity: 2,
+      rating: 4.2,
+      tags: ['bread', 'garlic']
+    },
+    {
+      name: 'Caesar Salad',
+      price: 8.99,
+      category: 'appetizer',
+      popularity: 1,
+      rating: 4.0,
+      tags: ['vegetarian', 'healthy']
+    },
+    {
+      name: 'Gluten-Free Pizza',
+      price: 16.99,
+      category: 'entree',
+      popularity: 3,
+      rating: 4.4,
+      tags: ['gluten-free', 'specialty']
+    }
+  ];
+  
 
 
 
@@ -114,7 +156,10 @@ const foodArr = ['pepperoni', 11.99, 'side', 9, 8, 'kids']
 
 //CODE HERE
 
-const filteredFood = foodArr.filter([5])
+function filterByTag(foodObj) {
+    return foodObj.tags.includes('vegetarian');
+  }
+  
 
 
 
@@ -157,15 +202,18 @@ const filteredFood = foodArr.filter([5])
     Return the filtered array from the entire function
 */
 
-function filterByProperty(property, number, type)  {
-    property = pizza.popularity;
-    number = pizza.rating;
-    type = pizza.price;
-var filterByPopularity = []
-    if (pizza < 8) {
-        pizza.push
+function filterByProperty(property, number, type) {
+    let filteredArray = [];
+  
+    if (type === 'above') {
+      filteredArray = foodArr.filter((food) => food[property] > number);
+    } else if (type === 'below') {
+      filteredArray = foodArr.filter((food) => food[property] < number);
     }
-}
+  
+    return filteredArray;
+  }
+  
 
 
 /*
@@ -175,6 +223,4 @@ var filterByPopularity = []
     You'll have to console.log to see the filtered array
 */
 
-filterByProperty(pizza, 6, price)
-
-console.log(filterByProperty)
+console.log(filterByProperty('rating', 4, 'above'));

@@ -30,23 +30,18 @@
 */
 
 class Ticket {
-    constructor(items, orderTime, customerID,) {
-    this.items = items;
-    this.orderTime = orderTime;
-    this.customerID = customerID;
-    this.status = queued;
+    constructor(items, orderTime, customerId) {
+      this.items = items;
+      this.orderTime = orderTime;
+      this.customerId = customerId;
+      this.status = 'queued';
     }
-
-    updateStatus() {
-        newStatus = this.status;
-        console.log('The order for', Ticket.customerID, 'is now', this.status)
+  
+    updateStatus(newStatus) {
+      this.status = newStatus;
+      console.log(`The order for customer ${this.customerId} is now ${this.status}.`);
     }
-}
-
-// I am not entirely sure what I'm doing wrong, if I try to console.log ANYTHING in that method, it breaks literally everything in this file, or it doesnt log anything to the console
-
-
-
+  }
 
 /*
     Create a new instance of your class.
@@ -59,7 +54,7 @@ class Ticket {
     customer: 575
 */
 
-let firstTicket = new Ticket('pizza, bread, soda', '7:03', 575)
+const firstTicket = new Ticket(['pizza', 'bread', 'soda'], '7:03 PM', '575');
 
 
 /*

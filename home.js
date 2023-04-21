@@ -21,9 +21,10 @@
     'Welcome back, Andrew'
 */
 
-let greetUser = username => 'Welcome back' + username;
-
-greetUser('Andrew')
+const greetUser = (username) => {
+    return `Welcome back, ${username}`;
+  }
+  
 
 
 
@@ -46,17 +47,16 @@ greetUser('Andrew')
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
+const deliveryZone = [85205, 85204, 85203, 85202, 85201];
 
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-
-function canWeDeliver(zipCode) {
-    let (i = 0, i < deliveryAreaZipCodes.length, i++);
-    if (i > 85210) {
-        console.log("You're in our delivery zone!")
-    } else {
-        console.log("Sorry, we cannot deliver to this address")
-    }
+const canWeDeliver = (zipCode) => {
+  if (deliveryZone.includes(zipCode)) {
+    return `You're in our delivery zone!`;
+  } else {
+    return `Sorry, we can't deliver to that address`;
+  }
 }
+
 
 
 
@@ -77,10 +77,17 @@ function canWeDeliver(zipCode) {
     Name your new function `canWeDeliverTwo`.
 */
 
-function canWeDeliverTwo() {
-    deliveryAreaZipCodes.includes('21')
-    console.log("Sorry, we cannot deliver to this address")
+const deliveryZone = [85205, 85204, 85203, 85202, 85201];
+
+const canWeDeliverTwo = (zipCode) => {
+  for (let i = 0; i < deliveryZone.length; i++) {
+    if (deliveryZone[i] === zipCode) {
+      return `You're in our delivery zone!`;
+    }
+  }
+  return `Sorry, we can't deliver to that address`;
 }
+
 
 
 //////////////////PROBLEM 3////////////////////

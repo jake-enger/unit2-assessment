@@ -33,10 +33,11 @@ const cart = [
     }
 ]
 
-//CODE HERE
-
-const summedPrice = cart.reduce(cart.pizza, cart.pasta, cart.salad)
-console.log(summedPrice)
+const totalPrice = cart.reduce((accumulator, item) => {
+    return accumulator + item.price;
+  }, 0);
+  
+  console.log(totalPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,10 +55,10 @@ console.log(summedPrice)
 */
 
 function calcFinalPrice(cartTotal, couponValue, tax) {
-    
-
-}
-
+    const taxAmount = cartTotal * tax;
+    const finalPrice = cartTotal + taxAmount - couponValue;
+    return finalPrice;
+  }
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,7 +81,17 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 */
 
 /*
-    TEXT ANSWER HERE
+name (String): This property stores the name of the customer. 
+It's a string data type because names are typically made up of letters and other characters that are not used in mathematical operations.
+
+email (String): This property stores the email address of the customer.
+It's also a string data type because email addresses are made up of characters that are not used in mathematical operations.
+
+phoneNumber (String): This property stores the phone number of the customer. 
+It's a string data type because phone numbers are typically stored and displayed as strings, and may include special characters like dashes or parentheses.
+
+address (Object): This property stores the address of the customer as an object with nested properties. 
+This makes it easier to access individual parts of the address, like the street or zip code. Each property of the address object is also a string data type.
 
 */
 
@@ -89,4 +100,14 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: "John Doe",
+    email: "johndoe@example.com",
+    phoneNumber: "+1 555-555-5555",
+    address: {
+      street: "123 Main St",
+      city: "Anytown",
+      state: "CA",
+      zip: "12345"
+    }
+  };
